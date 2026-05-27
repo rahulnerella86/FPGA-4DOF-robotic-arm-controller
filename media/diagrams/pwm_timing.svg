@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  
+  <!-- Axes -->
+  <line x1="50" y1="200" x2="750" y2="200" stroke="#000" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="250" stroke="#000" stroke-width="2"/>
+  
+  <!-- Axis Labels -->
+  <text x="30" y="70" font-family="Arial" font-size="14">3.3V</text>
+  <text x="30" y="200" font-family="Arial" font-size="14">0V</text>
+  <text x="740" y="230" font-family="Arial" font-size="14">Time</text>
+  
+  <!-- Pulse Waveform -->
+  <path d="M 50 200 L 50 70 L 150 70 L 150 200 L 650 200 L 650 70 L 750 70" fill="none" stroke="#dc3545" stroke-width="4"/>
+  
+  <!-- Timing Markers -->
+  <!-- Start of Period 1 -->
+  <line x1="50" y1="40" x2="50" y2="260" stroke="#6c757d" stroke-dasharray="5,5"/>
+  <text x="40" y="280" font-family="Arial" font-size="14">0ms</text>
+  
+  <!-- End of Pulse -->
+  <line x1="150" y1="40" x2="150" y2="260" stroke="#6c757d" stroke-dasharray="5,5"/>
+  <text x="135" y="280" font-family="Arial" font-size="14">1.5ms</text>
+  
+  <!-- End of Period 1 / Start of Period 2 -->
+  <line x1="650" y1="40" x2="650" y2="260" stroke="#6c757d" stroke-dasharray="5,5"/>
+  <text x="635" y="280" font-family="Arial" font-size="14">20ms</text>
+  
+  <!-- Dimension Arrows -->
+  <!-- Pulse Width -->
+  <line x1="50" y1="40" x2="150" y2="40" stroke="#007bff" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+  <text x="100" y="30" font-family="Arial" font-size="14" fill="#007bff" text-anchor="middle">Pulse Width (1.0 - 2.0 ms)</text>
+  
+  <!-- Period -->
+  <line x1="50" y1="220" x2="650" y2="220" stroke="#28a745" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+  <text x="350" y="245" font-family="Arial" font-size="14" fill="#28a745" text-anchor="middle">Period (20 ms / 50 Hz)</text>
+  
+  <defs>
+    <marker id="arrow-end" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="context-stroke" />
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M9,0 L9,6 L0,3 z" fill="context-stroke" />
+    </marker>
+  </defs>
+</svg>
